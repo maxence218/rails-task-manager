@@ -1,0 +1,26 @@
+
+
+  <%= form_with model: @task do |f| %>
+  <div class="card">
+    <div class="card-body">
+      <div class="input">
+        <%= f.label :title, { class: "form-label m-2"}  %>
+        <%= f.text_field :title, { class: "form-control"} %>
+      </div>
+      <div class="input">
+        <%= f.label :details, { class: "form-label m-2"} %>
+        <%= f.text_field :details, { class: "form-control"} %>
+      </div>
+      <div class="input d-flex justify-content-between">
+        <div>
+          <%= f.label :completed, { class: "form-label m-2"} %>
+          <%= f.check_box :completed %>
+        </div>
+        <div>
+          <%= f.submit class: "btn btn-primary" %>
+          <%= link_to "Home page", tasks_path, class: "btn btn-primary" %>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
